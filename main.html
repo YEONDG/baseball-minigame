@@ -38,10 +38,27 @@
             numbers.splice(index, 1)
         }
 
+        const tries = [];
+        function checkInput(input){
+            if (input.length !== 4){
+                return alert('4자리 숫자를 입력해 주세요.');
+            }
+            if (new Set(input).size !== 4){
+                return alert('중복되지 않게 입력해 주세요.');
+            }
+            if (tries.includes(input)){
+                return alert('이미 시도한 값입니다.');
+            }
+            return ture;
+        } //검사하는 코드
+
         $form.addEventListener('submit', (event)=> {
             event.preventDefault();
-            console.log('서브밋')
+            const value = $input.value;
+            $input.value = '';
+            const valid = checkInput(value);
         })
+
 
 
     </script>
