@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="input">
+        <button id="btn">확인</button>
+    </form>
+    <div id="logs"></div>
+    <script>
+        const $input = document.querySelector('#input');
+        const $form = document.querySelector('#form');
+        const $logs = document.querySelector('#logs');
+        const $btn = document.querySelector('#btn');
+
+        // 입력밦 쓰기
+        $form.addEventListener("input", data)
+
+        function data(e){
+            $logs.textContent = e.target.value
+        }
+
+        // 클릭시 저장
+        $btn.addEventListener("click", Save)
+   
+        function Save(e){
+            e.preventDefault()
+            
+        }
+
+   
+   </script>
+    
+</body>
+</html>
